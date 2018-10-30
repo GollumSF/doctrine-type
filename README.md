@@ -53,5 +53,5 @@ class Entity {
 
 ## Single packages:
 
-https://github.com/GollumSF/doctrine-tinyint
-https://github.com/GollumSF/doctrine-arraypipe
+ - https://github.com/GollumSF/doctrine-tinyint
+ - https://github.com/GollumSF/doctrine-arraypipe
