@@ -23,6 +23,7 @@
 	"minimum-stability": "dev",
 	"require" : {
 		"gollumsf/doctrine-tinyint": "*",
-		"gollumsf/doctrine-arraypipe": "*"
+		"gollumsf/doctrine-arraypipe": "*",
+		"gollumsf/doctrine-enum": "*"
 	}
 }
