@@ -16,13 +16,25 @@ doctrine:
         types:
             tinyint:  GollumSF\Doctrine\TinyInt # Add TINYINT type
             array_pipe:  GollumSF\Doctrine\ArrayPipe # Add array pipe transformer [ 'VAL1', 'VAL2' ] => 'VAL1|VAL2'
-            enum:  GollumSF\Doctrine\ArrayPipe # Add ENUM type
+            enum_my_enum:  App\Doctrine\MyEnum # Add ENUM type (customable by enum)
 ```
 
 ## Usage:
 
 
 ```php
+namespace App\Doctrine;
+
+use GollumSF\Doctrine;
+use App\Entity\MyEnum as Enum;
+
+class MyEnum extends EnumType {
+	
+	public function getEnum(): string {
+		return Enum::class;
+	}
+}
+
 namespace App\Entity;
 
 use GollumSF\Enum\Enum;
@@ -55,7 +67,7 @@ class Entity {
 	// Storage data in database with value: ROLE_EXAMPLE|ROLE_USER|ROLE_ADMIN
 	
 	/**
-	 * @ORM\Column(type="enum", options={"enum"=MyEnum::class})
+	 * @ORM\Column(type="enum_my_enum")
 	 * @var int
 	 */
 	private $enum;
