@@ -22,8 +22,8 @@
 	},
 	"minimum-stability": "dev",
 	"require" : {
-		"gollumsf/doctrine-tinyint": ">=1",
-		"gollumsf/doctrine-arraypipe": ">=1",
-		"gollumsf/doctrine-enum": ">=1"
+		"gollumsf/doctrine-tinyint": "^1",
+		"gollumsf/doctrine-arraypipe": "^1",
+		"gollumsf/doctrine-enum": "^1"
 	}
 }
